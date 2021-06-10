@@ -1,0 +1,11 @@
+<html>
+{% if q_l %}
+    <ul>
+    {% for question in q_l %}
+        <li><a href="/car_detector/{{ question.id }}">{{ question.question_text }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
+</html>
